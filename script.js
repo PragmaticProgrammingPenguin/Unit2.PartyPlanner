@@ -9,7 +9,7 @@ async function getEvents() {
   try {
     // start the request with fetch and store result in a var called res
     const res = await fetch(
-      "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-WEB-PT/events"
+      "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2404-FTB-ET-WEB-AM/events"
     );
     // turn the response into an object and store result in a var called json
     const json = await res.json();
@@ -33,7 +33,7 @@ function createEventsHTML(events, container) {
     deleteButton.addEventListener("click", async function () {
       try {
         const res = await fetch(
-          `https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-WEB-PT/events/${event.id}`,
+          `https://fsa-crud-2aa9294fe819.herokuapp.com/api/2404-FTB-ET-WEB-AM/events/${event.id}`,
           {
             method: "DELETE",
           }
@@ -66,7 +66,7 @@ function createEventsHTML(events, container) {
 async function createEvent(event) {
   try {
     const res = await fetch(
-      "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-WEB-PT/events",
+      "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2404-FTB-ET-WEB-AM/events",
       {
         method: "POST",
         body: JSON.stringify(event),
